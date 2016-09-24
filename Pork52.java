@@ -1,4 +1,3 @@
-package com.njau.src;
 /**
  * 
  * @author YangYong
