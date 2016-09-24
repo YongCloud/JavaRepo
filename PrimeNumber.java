@@ -1,4 +1,3 @@
-package com.njau.src;
 /**
  * 求指定区间内的所有素数
  * @author YangYong
