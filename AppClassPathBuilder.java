@@ -14,18 +14,18 @@ import java.nio.file.Paths;
  */
 public class AppClassPathBuilder {
 	public static void main(String[] args) {
-		if (args.length < 2) {
-			System.out.println("Usage:java AppClassPathBuilder jarPath separator");
-			System.out.println("separator:Windows is ; otherwise :");
+		if (args.length < 1) {
+			System.out.println("Usage:java AppClassPathBuilder jarPath");
 			System.exit(1);
 		}
 
 		Path path = Paths.get(args[0]);
 		try (DirectoryStream<Path> entries = Files.newDirectoryStream(path, "*.jar")) {
+			String separator = System.getProperty("path.separator");
 			StringBuilder classPath = new StringBuilder();
 
 			for (Path entry : entries) {
-				classPath.append(entry + args[1]);
+				classPath.append(entry + separator);
 			}
 
 			System.out.println(classPath.substring(0, classPath.length() - 1));
