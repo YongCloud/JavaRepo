@@ -56,7 +56,7 @@ public class PrimeNumber {
 		if(2 == n){
 			return true;
 		}
-		for(int i=2;i<=n/2;i++){
+		for(int i=2;i<=(int)Math.sqrt(n);i++){
 			if(n%i == 0){
 				return false;
 			}
