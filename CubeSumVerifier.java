@@ -1,14 +1,14 @@
 /**
  * 自然数的立方和性质探讨
  * 
- * @author YangYong 2018/03/12
- * @version 1.0.0
+ * @author YangYong
+ * @version 1.0.0 2018/03/12
  */
 public class CubeSumVerifier {
 	public static void main(String[] args) {
 		check();
 		findMore();
-//		System.out.println(verify(11, 109, 330));
+//		test(406,917,5544);
 	}
 
 	/**
@@ -57,10 +57,9 @@ public class CubeSumVerifier {
 			return false;
 		}
 	}
-	
+
 	/**
-	 * 寻找更多满足此规律的自然数。
-	 * 算法时间复杂度为O（n^2）， n为寻找的自然数上限
+	 * 寻找更多满足此规律的自然数。 算法时间复杂度为O（n^2）， n为寻找的自然数上限
 	 */
 	public static void findMore() {
 		/**
@@ -76,13 +75,31 @@ public class CubeSumVerifier {
 
 		for (int i = 0; i < cubeSumArr.length - 1; i++) {
 			long sum = cubeSumArr[i];
-			for (int j = i + 1; j < cubeSumArr.length - 1; j++) {
+			for (int j = i + 1; j < cubeSumArr.length; j++) {
 				sum += cubeSumArr[j];
 				double root = Math.cbrt(sum);
-				if (Math.abs(root - (int) root) <= 0.00001 && sum == cube((int) root)) {
+				int temp = (int) root;
+				if (Double.compare(root, temp) == 0) {
 					System.out.println((i + 1) + "^3+...+" + (j + 1) + "^3=" + (int) root + "^3");
 				}
 			}
 		}
+	}
+	
+	/**
+	 * 测试发现的等式是否成立
+	 * @param low 区间下限
+	 * @param up 区间上限
+	 * @param another
+	 */
+	public static void test(int low, int up, int another) {
+		long left = 0L;
+		for (int i = low; i <= up; i++) {
+			left += i * i * i;
+		}
+		long right = (long) another * another * another;
+		System.out.println("left:" + left);
+		System.out.println("right:" + right);
+		System.out.println("left=right:" + (left == right));
 	}
 }
