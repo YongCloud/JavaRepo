@@ -1,5 +1,11 @@
 package com.ivysoft.java.oop;
 
+/**
+ * 子类
+ * 
+ * @author xingjian
+ * @since 2019/04/07
+ */
 public class SubClass extends Base {
 	private String message;
 

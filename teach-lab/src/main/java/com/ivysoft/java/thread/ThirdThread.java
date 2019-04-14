@@ -8,6 +8,9 @@ import java.util.concurrent.FutureTask;
  * 通过实现Callable<V>接口创建线程
  * 
  * @author Xingjian
+ * @see java.util.concurrent.Callable
+ * @see java.util.concurrent.Future
+ * @see java.util.concurrent.FutureTask
  * @since 2019/04/09
  */
 public class ThirdThread implements Callable<Integer> {

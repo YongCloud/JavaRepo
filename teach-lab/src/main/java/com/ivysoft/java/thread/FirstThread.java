@@ -4,6 +4,7 @@ package com.ivysoft.java.thread;
  * 通过继承Thread类创建线程
  * 
  * @author Xingjian
+ * @see java.lang.Thread
  * @since 2019/04/09
  */
 public class FirstThread extends Thread {
