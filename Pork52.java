@@ -36,10 +36,21 @@ public class Pork52 {
         Random ra = new Random();
         for (int i = 0; i < pork52.length; i++) {
             int index = ra.nextInt(52);
-            pork52[i] = pork52[i] ^ pork52[index];
-            pork52[index] = pork52[i] ^ pork52[index];
-            pork52[i] = pork52[i] ^ pork52[index];
+            swap(i, index);
         }
+    }
+    
+    /**
+     * 交换数组中索引i和j位置上的两个整数
+     */
+    private void swap(int i, int j) {
+        // 务必关注i=j的情况，不然该位置上的元素将变为0
+        if (i == j) {
+            return;
+        }
+        pork52[i] = pork52[i] ^ pork52[j];
+        pork52[j] = pork52[i] ^ pork52[j];
+        pork52[i] = pork52[i] ^ pork52[j];
     }
 
     /**
