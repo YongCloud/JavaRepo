@@ -1,6 +1,8 @@
 /**
- *created by yangyong,Nov 14,2016
- *function:the method to skip dead loop
+ * method to skip dead loop.
+ *
+ * @author xingjian
+ * @since 2016/11/16
  */
 public class SkipDeadLoop {
 	public static void main(String[] args) {
