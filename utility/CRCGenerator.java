@@ -1,8 +1,8 @@
 /**
  * 使用查表法产生16位的CRC校验，生成多项式为 G(X) = X^16 + X^12 + X^5 + 1
  * 
- * @author YangYong 2018年3月13日下午4:07:37
- * @version 1.0.0
+ * @author xingjian
+ * @since 2018/03/13
  */
 public class CRCGenerator {
 	private static final int[] CRCTable = { 0x0000, 0x1021, 0x2042, 0x3063, 0x4084, 0x50A5, 0x60C6, 0x70E7, 0x8108,

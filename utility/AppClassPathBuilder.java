@@ -8,8 +8,8 @@ import java.nio.file.Paths;
  * Auto build class path where the system(or application) class loader search
  * classes. The path is a folder which stores all jars.
  * 
- * @author YangYong
- * @version 1.0.0 2018/02/25
+ * @author xingjian
+ * @since 2018/02/25
  *
  */
 public class AppClassPathBuilder {
@@ -25,7 +25,8 @@ public class AppClassPathBuilder {
 			StringBuilder classPath = new StringBuilder();
 
 			for (Path entry : entries) {
-				classPath.append(entry + separator);
+				classPath.append(entry);
+				classPath.append(separator);
 			}
 
 			System.out.println(classPath.substring(0, classPath.length() - 1));
