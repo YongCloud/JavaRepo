@@ -1,6 +1,6 @@
 /**
  * 
- * @author YangYong
+ * @author xingjian
  *
  */
 import java.util.Random;
