@@ -1,8 +1,8 @@
 /**
  * 自然数的立方和性质探讨
  * 
- * @author YangYong
- * @version 1.0.0 2018/03/12
+ * @author xingjian
+ * @version 2018/03/12
  */
 public class CubeSumVerifier {
 	public static void main(String[] args) {
