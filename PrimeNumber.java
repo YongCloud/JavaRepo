@@ -1,6 +1,6 @@
 /**
  * 求指定区间内的所有素数
- * @author YangYong
+ * @author xingjian
  *
  */
 public class PrimeNumber {
