@@ -39,7 +39,7 @@ public class LogFilter {
     }
 
     /**
-     * filter log with start keyword.
+     * filter log with keyword.
      * 
      * @param logFileName
      * @param keyword
